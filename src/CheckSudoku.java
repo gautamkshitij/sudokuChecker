@@ -10,7 +10,7 @@ public class CheckSudoku {
 		for (int j = 0; j < 9; j++) {
 			boolean[] visited = new boolean[10];
 			for (int i = 0; i < 9; i++) {
-				if (sudoku9X9[i][j] != -1) {
+				if (sudoku9X9[i][j] >= 1) {
 					if (visited[(sudoku9X9[i][j])]) {
 						return false;
 					}
@@ -23,7 +23,7 @@ public class CheckSudoku {
 		for (int i = 0; i < 9; i++) {
 			boolean[] visited = new boolean[10];
 			for (int j = 0; j < 9; j++) {
-				if (sudoku9X9[i][j] != -1) {
+				if (sudoku9X9[i][j] >= 1) {
 					if (visited[(sudoku9X9[i][j])]) {
 						return false;
 					}
@@ -37,7 +37,7 @@ public class CheckSudoku {
 			boolean[] blockHashMap = new boolean[10];
 			for (int i = block / 3 * 3; i < block / 3 * 3 + 3; i++) {
 				for (int j = block % 3 * 3; j < block % 3 * 3 + 3; j++) {
-					if (sudoku9X9[i][j] != -1) {
+					if (sudoku9X9[i][j] >= 1) {
 						if (blockHashMap[(sudoku9X9[i][j])]) {
 							return false;
 						}
